@@ -1,0 +1,7 @@
+v 4
+file . "trava.vhd" "e56f6c6ec23c7b9d288615f251c6ad3888d293ed" "20251108021739.180":
+  entity trava at 1( 0) + 0 on 15;
+  architecture rtl of trava at 20( 630) + 0 on 16;
+file . "binto7seg.vhd" "fc385d555cf5eca354bd1df30cc8ceefcc156e2d" "20251108021612.103":
+  entity binto7seg at 1( 0) + 0 on 4;
+  architecture rtl of binto7seg at 11( 255) + 0 on 4;
