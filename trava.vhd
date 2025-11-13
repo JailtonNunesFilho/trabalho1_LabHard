@@ -38,8 +38,6 @@ begin
             elsif next_state = aberto then
                 current_state <= next_state ;
             end if ;
-
-            --
         end if ;
     end process;
 
