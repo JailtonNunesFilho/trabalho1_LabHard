@@ -1,0 +1,13 @@
+v 4
+file . "binto7seg.vhd" "a0d2133984b4cc0fc4f9dbb265365fb8aaf8982b" "20251119231539.008":
+  entity binto7seg at 1( 0) + 0 on 15;
+  architecture rtl of binto7seg at 11( 255) + 0 on 16;
+file . "clock_1hz.vhd" "f9bedb922bf08a6effe49dd1eae9a058d047071a" "20251119231539.008":
+  entity clock_1hz at 1( 0) + 0 on 11;
+  architecture rtl of clock_1hz at 12( 186) + 0 on 12;
+file . "main.vhd" "c00563240af741a2c34c5b9206f8f829252ae839" "20251119231539.008":
+  entity main at 1( 0) + 0 on 17;
+  architecture rtl of main at 18( 631) + 0 on 18;
+file . "trava.vhd" "761cf55f4cb5e9899517cafc4e746d4999f2e744" "20251119231539.008":
+  entity trava at 1( 0) + 0 on 13;
+  architecture rtl of trava at 20( 660) + 0 on 14;

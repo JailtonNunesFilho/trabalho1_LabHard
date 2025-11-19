@@ -46,6 +46,8 @@ begin
 				display <= "01100001" ;
 			when "1111" => -- F
 				display <= "01110001" ;
+            when others =>
+                display <= "11111111" ;
 		end case ;
 	end process;
 end architecture;
