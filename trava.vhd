@@ -23,21 +23,24 @@ architecture rtl of trava is
     signal current_state : state_type := travado ;
 
     signal numeric_input : natural range 0 to 255 ;
-    signal vetor_desarme : std_logic_vector(7 downto 0) ;
-    signal contador : natural := tempo_para_desarme ;
+    
+    
 
 begin
 
     process (clock, reset, input)
-        
+        variable contador : natural := tempo_para_desarme ;
+        variable vetor_desarme : std_logic_vector(7 downto 0) ;
     begin
         numeric_input <= to_integer(unsigned(input)) ;
         
-        vetor_desarme <= std_logic_vector(to_unsigned(contador, vetor_desarme'length)) ;
+        vetor_desarme := std_logic_vector(to_unsigned(contador, vetor_desarme'length)) ;
 
         if reset = '1' then
             current_state <= travado ;
-            contador <= tempo_para_desarme;
+            contador := tempo_para_desarme;
+            trava1 <= '1' ;
+            segundos <= vetor_desarme ;
 
         elsif (clock'event and clock = '1' and reset = '0') then
             case current_state is 
@@ -50,7 +53,7 @@ begin
                     else
                         trava1 <= '1' ;
                         segundos <= vetor_desarme ;
-                        contador <= contador - 1 ;
+                        contador := contador - 1 ;
                     end if ;
 						  else
 							segundos <= "00000000" ;
